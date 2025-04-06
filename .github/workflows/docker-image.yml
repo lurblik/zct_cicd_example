@@ -46,4 +46,4 @@ jobs:
         instance_name: '${{ vars.GCP_INSTANCE_NAME }}'
         zone: 'us-central1-c'
         ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
-        command: 'docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker pull ${{ vars.GCP_IMAGE_NAME }} && docker run -p 5000:5000 --name flask -e POSTGRES_HOST=${{ secrets.NEON_CONNECTION_STRING }} ${{ vars.GCP_IMAGE_NAME }}'
+        command: "CONTAINER_NAME=flask; if [ -z "$CONTAINER_NAME" ]; then echo "Usage: Set CONTAINER_NAME=<container_name>"; else if docker ps --filter "name=^${CONTAINER_NAME}$" --format '{{.Names}}' | grep -q "^${CONTAINER_NAME}$"; then echo "Container '$CONTAINER_NAME' is running. Stopping and removing it..."; docker stop "$CONTAINER_NAME"; docker rm "$CONTAINER_NAME"; echo "Container '$CONTAINER_NAME' has been stopped and removed."; else echo "Container '$CONTAINER_NAME' is not running."; fi; fi && docker pull ${{ vars.GCP_IMAGE_NAME }} && docker run -p 5000:5000 --name flask -e POSTGRES_HOST=${{ secrets.NEON_CONNECTION_STRING }} ${{ vars.GCP_IMAGE_NAME }}"
