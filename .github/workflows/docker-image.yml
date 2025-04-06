@@ -28,6 +28,7 @@ jobs:
           tags: ${{ vars.GCP_IMAGE_NAME }}
 
   google:
+    needs: docker
     environment: default
     runs-on: ubuntu-latest
     steps:
@@ -56,4 +57,4 @@ jobs:
               fi
             fi
             docker pull ${{ vars.GCP_IMAGE_NAME }}
-            docker run -d -p 5000:5000 --name flask -e POSTGRES_HOST=${{ secrets.NEON_CONNECTION_STRING }} ${{ vars.GCP_IMAGE_NAME }}
+            docker run -d -p 80:5000 --name flask -e POSTGRES_HOST=${{ secrets.NEON_CONNECTION_STRING }} ${{ vars.GCP_IMAGE_NAME }}
