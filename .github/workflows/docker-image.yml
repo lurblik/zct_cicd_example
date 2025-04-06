@@ -29,4 +29,21 @@ jobs:
         with:
           context: .
           push: true
-          tags: trane271/zct_test:latest
+          tags: ${{ vars.GCP_IMAGE_NAME }}
+  google:
+    environment: default
+    runs-on: ubuntu-latest
+    steps:
+     - 
+      name: Google Cloud Auth
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+     -
+      name: Connect to VM
+      uses: google-github-actions/ssh-compute@v1
+      with:
+        instance_name: '${{ vars.GCP_INSTANCE_NAME }}'
+        zone: 'us-central1-c'
+        ssh_private_key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
+        command: 'docker stop flask && docker rm flask && docker pull ${{ vars.GCP_IMAGE_NAME }} && docker run -p 5000:5000 --name flask -e POSTGRES_HOST=${{ secrets.NEON_CONNECTION_STRING }} ${{ vars.GCP_IMAGE_NAME }}'
