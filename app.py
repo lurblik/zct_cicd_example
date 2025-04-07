@@ -3,7 +3,6 @@ from flask import Flask
 from datetime import date
 import psycopg2
 
-
 app = Flask(__name__)
 
 @app.route("/")
