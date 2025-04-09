@@ -33,7 +33,8 @@ Pre vývoj front-endu sme sa rozhodli použiť Flutter pre jeho schopnosť vytv�
 
 ## Diagram použitých služieb
 Využili sme 3 cloudové služby. 1. Firebase - autentifikácia používateľov, ukladanie informácií o používateľoch a ukladanie fortografií. 2. MongoDB Realm - ukladanie dát o príspevkoch a aktivitách. 3. Amplify AWS - posielanie push notifikácií.
-![Diagram](https://private-user-images.githubusercontent.com/166152352/328986921-08a58b6e-df8d-4d53-8903-d0b9ee9dea41.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDQyMTA4ODEsIm5iZiI6MTc0NDIxMDU4MSwicGF0aCI6Ii8xNjYxNTIzNTIvMzI4OTg2OTIxLTA4YTU4YjZlLWRmOGQtNGQ1My04OTAzLWQwYjllZTlkZWE0MS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwOVQxNDU2MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05ZGM5MWZkZDFlZDVjYTY1YTlhMzA3NGRjMjAyZDI2NWJmM2VhNTZiNmI3NWViYzc2YmVkN2RhM2IzNmRkNjgzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ohkQ4NTgcLbrZefYlp5fe3H_ntZ1uRkIinnHg-Y9fss)
+![Diagram](https://github.com/user-attachments/assets/568d3597-5160-42d1-8099-d626e6a239f5)
+
 
 
 ## Príspevok členov tímu
