@@ -20,7 +20,8 @@
 <h3>Diagram použitých služieb: </h3>
 <br>
 
-![[Pasted image 20250409165252.png]]
+![Pasted image 20250409165252](https://github.com/user-attachments/assets/88a5e3d4-42e8-4132-babf-7bfd236fed57)
+
 <br>
 
 Použivateľ do aplikácie zadá otázku a otázka sa pošle veľkému jazykovému modelu ktorý vygeneruje odpoveď, a pošle ju späť na stránku kde ju použivateľ uvidí. V momente keď použivateľ zadá otázku tak sa uloží do databázy. 
